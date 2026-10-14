@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12372d">
+<title>Meu Corre Financeiro</title>
+<style>
+:root{--green:#12372d;--green2:#1f5b47;--lime:#d9f99d;--bg:#f4f7f5;--card:#fff;--text:#17251f;--muted:#68776f;--line:#e1e9e4;--red:#b42318;--orange:#b45309}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:12px 15px;font-weight:700}.top{background:var(--green);color:white;padding:22px 16px 28px}.wrap{max-width:980px;margin:auto}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:var(--lime);color:var(--green);display:grid;place-items:center;font-size:25px;font-weight:900}.brand h1{font-size:21px;margin:0}.brand p{margin:3px 0 0;color:#c6ddd2;font-size:13px}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px}.topline select{background:#21483c;color:white;border:1px solid #537368;border-radius:10px;padding:9px;max-width:150px}.hero{margin-top:25px}.eyebrow{font-size:12px;letter-spacing:1.2px;color:#c6ddd2;font-weight:800}.hero h2{font-size:clamp(25px,5vw,36px);margin:5px 0}.hero p{color:#d7e8df;margin:0;font-size:14px}.main{padding:0 14px 34px;margin-top:-13px}.tabs{display:flex;gap:7px;overflow:auto;padding:8px 0 15px}.tab{background:#e4ece7;color:#375448;white-space:nowrap}.tab.active{background:var(--green);color:white}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:16px;box-shadow:0 2px 8px #163b2910}.metric .label{color:var(--muted);font-size:12px;font-weight:700}.metric .value{font-size:clamp(18px,3vw,25px);font-weight:850;margin-top:8px;letter-spacing:-.5px;overflow-wrap:anywhere}.metric .hint{font-size:12px;color:var(--muted);margin-top:5px}.positive{color:var(--green2)}.negative{color:var(--red)}.section{margin-top:16px}.section h3{margin:0 0 12px;font-size:17px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}.field label{font-size:12px;font-weight:750;color:#4c5f55}.field input,.field select{width:100%;border:1px solid #d6e1da;border-radius:11px;padding:12px;background:white;color:var(--text);min-width:0}.primary{background:var(--green);color:white;width:100%}.secondary{background:#e5eee8;color:var(--green)}.danger{background:#fff0ef;color:var(--red)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formgrid .full{grid-column:1/-1}.muted{color:var(--muted);font-size:13px}.list{display:flex;flex-direction:column;gap:9px}.item{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:12px}.item strong{display:block;font-size:14px}.item small{color:var(--muted);display:block;margin-top:3px}.amount{font-weight:850;white-space:nowrap}.itemActions{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap}.smallbtn{padding:6px 9px;border-radius:8px;font-size:12px}.status{font-size:11px;font-weight:800;padding:4px 7px;border-radius:20px;background:#fff1d6;color:#8b4c08}.status.paid{background:#dff6e8;color:#17633d}.empty{text-align:center;padding:22px;color:var(--muted);font-size:14px}.barrow{display:grid;grid-template-columns:100px 1fr 85px;gap:8px;align-items:center;font-size:12px;margin:10px 0}.barbg{height:9px;background:#edf1ee;border-radius:10px;overflow:hidden}.barfill{height:100%;background:var(--green2);border-radius:10px}.notice{background:#eff7e7;border:1px solid #d7e8c6;border-radius:14px;padding:14px;font-size:13px;line-height:1.5}.footer{text-align:center;color:var(--muted);font-size:11px;padding:22px 5px}.hidden{display:none!important}.period{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.period input{padding:9px;border:1px solid var(--line);border-radius:9px}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btnrow button{flex:1}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.topline{align-items:flex-start}.brand h1{font-size:19px}.main{padding-left:10px;padding-right:10px}.card{padding:14px}.barrow{grid-template-columns:90px 1fr 75px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <div class="topline"><div class="brand"><div class="logo">↗</div><div><h1>Meu Corre Financeiro</h1><p>Seu trabalho. Seu dinheiro. Seu lucro.</p></div></div>
+ <select id="vehicle" aria-label="Tipo de veículo"><option value="Carro">🚗 Carro</option><option value="Moto">🏍️ Moto</option></select></div>
+ <div class="hero"><div class="eyebrow">PAINEL DO MOTORISTA</div><h2>Seu corre está valendo a pena?</h2><p>Registre o que entra e sai. Descubra quanto realmente sobra.</p></div>
+</div></header>
+<main class="main wrap">
+<nav class="tabs" aria-label="Menu">
+<button class="tab active" data-page="dashboard">Visão geral</button><button class="tab" data-page="add">＋ Lançar movimento</button><button class="tab" data-page="pending">A receber</button><button class="tab" data-page="reports">Relatórios</button>
+</nav>
+<section id="page-dashboard">
+ <div class="card section"><div class="period"><strong>Período:</strong><select id="range"><option value="month">Este mês</option><option value="week">Últimos 7 dias</option><option value="all">Todo o período</option></select><span id="periodLabel" class="muted"></span></div></div>
+ <div class="grid section">
+  <div class="card metric"><div class="label">RECEITAS RECEBIDAS</div><div class="value positive" id="incomeTotal">R$ 0,00</div><div class="hint">Dinheiro que entrou</div></div>
+  <div class="card metric"><div class="label">DESPESAS PAGAS</div><div class="value negative" id="expenseTotal">R$ 0,00</div><div class="hint">Dinheiro que saiu</div></div>
+  <div class="card metric"><div class="label">SALDO DO PERÍODO</div><div class="value" id="profitTotal">R$ 0,00</div><div class="hint">Receitas − despesas</div></div>
+  <div class="card metric"><div class="label">MÉDIA POR DIA TRABALHADO</div><div class="value" id="dailyAverage">R$ 0,00</div><div class="hint">Estimativa do saldo diário</div></div>
+ </div>
+ <div class="two section">
+  <div class="card"><h3>💡 Vale a pena?</h3><div id="verdict" class="notice">Registre suas receitas e despesas para receber uma avaliação.</div></div>
+  <div class="card"><h3>Despesas por categoria</h3><div id="categoryBars" class="muted">Seus gastos aparecerão aqui.</div></div>
+ </div>
+ <div class="card section"><h3>Movimentos recentes</h3><div id="recentList" class="list"></div></div>
+ <div class="section btnrow"><button class="secondary" id="exportBtn">Exportar dados (CSV)</button><button class="secondary" id="backupBtn">Baixar backup</button><button class="secondary" id="restoreBtn">Restaurar backup</button><input type="file" id="restoreFile" accept=".json,application/json" class="hidden"></div>
+ <p class="muted">Seus registros ficam guardados neste navegador e aparelho. Use “Baixar backup” para guardar uma cópia.</p>
+</section>
+<section id="page-add" class="hidden">
+ <div class="two section">
+  <div class="card"><h3>➕ Novo lançamento</h3><form id="entryForm">
+   <div class="field"><label for="type">Tipo de movimento</label><select id="type"><option value="income">Receita</option><option value="expense">Despesa</option></select></div>
+   <div class="field"><label for="description">Descrição</label><input id="description" placeholder="Ex.: diária de entrega, abastecimento" required maxlength="90"></div>
+   <div class="formgrid">
+    <div class="field"><label for="amount">Valor (R$)</label><input id="amount" type="number" min="0.01" step="0.01" placeholder="0,00" required></div>
+    <div class="field"><label for="date">Data</label><input id="date" type="date" required></div>
+    <div class="field"><label for="category">Categoria</label><select id="category"></select></div>
+    <div class="field"><label for="payment">Frequência / recebimento</label><select id="payment"><option>Diária</option><option>Semanal</option><option>Quinzenal</option><option>Mensal</option><option>Por entrega</option><option>Avulso</option></select></div>
+    <div class="field full"><label for="status">Situação</label><select id="status"><option value="paid">Recebido / Pago</option><option value="pending">A receber / A pagar</option></select></div>
+   </div>
+   <button class="primary" type="submit">Salvar lançamento</button>
+  </form></div>
+  <div class="card"><h3>Como lançar?</h3><div class="notice"><b>Receita:</b> informe o valor da diária, semana, quinzena, mês ou entregas. Se ainda não recebeu, marque “A receber”.<br><br><b>Despesa:</b> registre o que gastou com combustível, alimentação, manutenção ou extras. Se ainda não pagou, marque “A pagar”.<br><br><b>Dica:</b> lance cada movimento assim que acontecer para não esquecer.</div></div>
+ </div>
+</section>
+<section id="page-pending" class="hidden">
+ <div class="card section"><h3>⏳ Pagamentos pendentes</h3><p class="muted">Valores a receber e despesas que ainda precisam ser pagas.</p><div id="pendingList" class="list"></div></div>
+</section>
+<section id="page-reports" class="hidden">
+ <div class="card section"><h3>📊 Relatório financeiro</h3><div class="period"><label for="reportMonth">Mês:</label><input type="month" id="reportMonth"></div><div id="reportSummary" class="grid section"></div><h3 class="section">Detalhamento das despesas</h3><div id="reportCategories"></div><div class="section"><button class="secondary" id="reportExport">Exportar relatório do mês (CSV)</button></div></div>
+ <div class="card section"><h3>O que o saldo significa?</h3><p class="muted">O saldo mostrado é a receita recebida menos as despesas pagas registradas. Para saber o lucro mais completo, registre também custos que às vezes ficam esquecidos, como seguro, documentação, pneus, óleo, depreciação do veículo e parcelas/juros. O aplicativo não substitui orientação contábil.</p></div>
+</section>
+<div class="footer">Meu Corre Financeiro • Controle simples para quem vive do corre<br>Protótipo inicial gratuito • dados armazenados neste dispositivo</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const today=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const money=n=>Number(n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const cats={income:['Diária','Semanal','Quinzenal','Mensal','Por entrega','Bônus','Outras receitas'],expense:['Combustível','Alimentação','Manutenção do carro/moto','Despesas extras','Pedágio/estacionamento','Seguro/documentação','Outras despesas']};
+let entries=[];
+try{entries=JSON.parse(localStorage.getItem('meuCorreFinanceiro_v1')||'[]')}catch(e){entries=[]}
+function save(){localStorage.setItem('meuCorreFinanceiro_v1',JSON.stringify(entries))}
+function dateBR(s){if(!s)return '';let [y,m,d]=s.split('-');return `${d}/${m}/${y}`}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fillCategories(){let old=$('category').value;let list=cats[$('type').value];$('category').innerHTML=list.map(c=>`<option>${esc(c)}</option>`).join('');if(list.includes(old))$('category').value=old}
+$('type').addEventListener('change',()=>{fillCategories();$('payment').value=$('type').value==='income'?'Diária':'Avulso';$('status').options[0].text=$('type').value==='income'?'Recebido':'Pago';$('status').options[1].text=$('type').value==='income'?'A receber':'A pagar'});
+$('date').value=today();$('reportMonth').value=today().slice(0,7);fillCategories();
+function selectedEntries(){let r=$('range').value;let now=new Date();return entries.filter(e=>{if(r==='all')return true;let d=new Date(e.date+'T12:00:00');if(r==='week'){let cut=new Date(now);cut.setDate(now.getDate()-6);cut.setHours(0,0,0,0);return d>=cut&&d<=now}return e.date.slice(0,7)===today().slice(0,7)})}
+function totals(list){let income=list.filter(e=>e.type==='income'&&e.status==='paid').reduce((s,e)=>s+e.amount,0);let expense=list.filter(e=>e.type==='expense'&&e.status==='paid').reduce((s,e)=>s+e.amount,0);return {income,expense,profit:income-expense}}
+function itemHTML(e,actions=true){return `<div class="item"><div><strong>${e.type==='income'?'↗':'↘'} ${esc(e.description)}</strong><small>${dateBR(e.date)} · ${esc(e.category)} · ${e.type==='income'?'Receita':'Despesa'}</small><small>${esc(e.payment||'Avulso')} · ${esc($('vehicle').value)}</small>${actions?`<div class="itemActions">${e.status==='pending'?`<button class="smallbtn secondary" onclick="settle('${e.id}')">${e.type==='income'?'Marcar recebido':'Marcar pago'}</button>`:''}<button class="smallbtn danger" onclick="removeEntry('${e.id}')">Excluir</button></div>`:''}</div><div style="text-align:right"><div class="amount ${e.type==='income'?'positive':'negative'}">${e.type==='income'?'+':'−'} ${money(e.amount)}</div><span class="status ${e.status==='paid'?'paid':''}">${e.status==='paid'?(e.type==='income'?'Recebido':'Pago'):(e.type==='income'?'A receber':'A pagar')}</span></div></div>`}
+function render(){let list=selectedEntries(),t=totals(list);$('incomeTotal').textContent=money(t.income);$('expenseTotal').textContent=money(t.expense);$('profitTotal').textContent=money(t.profit);$('profitTotal').className='value '+(t.profit>=0?'positive':'negative');let days=new Set(list.filter(e=>e.status==='paid').map(e=>e.date));$('dailyAverage').textContent=money(days.size?t.profit/days.size:0);$('periodLabel').textContent=$('range').value==='month'?'Mês atual':$('range').value==='week'?'Últimos 7 dias':'Todo o período';
+let v=$('verdict');if(!list.length){v.textContent='Comece registrando suas receitas e despesas. Com os dados, calcularemos seu saldo.'}else if(t.income===0&&t.expense>0){v.textContent='Atenção: você registrou despesas, mas ainda não há receitas recebidas neste período.'}else if(t.profit>0){v.innerHTML=`<b>Até agora, está sobrando dinheiro.</b><br>Seu saldo é ${money(t.profit)}. Confira se todos os custos do veículo foram registrados antes de decidir.`}else if(t.profit<0){v.innerHTML=`<b>Atenção: suas despesas superaram as receitas.</b><br>O saldo está negativo em ${money(Math.abs(t.profit))}. Reveja seus gastos e o valor recebido por trabalho.`}else{v.textContent='Receitas e despesas estão iguais. Ainda não há sobra financeira registrada.'}
+let exp=list.filter(e=>e.type==='expense'&&e.status==='paid'),by={};exp.forEach(e=>by[e.category]=(by[e.category]||0)+e.amount);let catsSorted=Object.entries(by).sort((a,b)=>b[1]-a[1]);$('categoryBars').innerHTML=catsSorted.length?catsSorted.map(([c,n])=>`<div class="barrow"><span>${esc(c)}</span><div class="barbg"><div class="barfill" style="width:${Math.max(2,n/Math.max(...catsSorted.map(x=>x[1]))*100)}%"></div></div><b>${money(n)}</b></div>`).join(''):'Nenhuma despesa paga neste período.';
+let recent=[...entries].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);$('recentList').innerHTML=recent.length?recent.map(e=>itemHTML(e)).join(''):'<div class="empty">Nenhum lançamento ainda. Toque em “Lançar movimento” para começar.</div>';
+let pend=entries.filter(e=>e.status==='pending').sort((a,b)=>a.date.localeCompare(b.date));$('pendingList').innerHTML=pend.length?pend.map(e=>itemHTML(e)).join(''):'<div class="empty">Tudo certo! Não há pagamentos pendentes cadastrados.</div>';
+renderReport()}
+function renderReport(){let month=$('reportMonth').value;let list=entries.filter(e=>e.date.slice(0,7)===month),t=totals(list),pendingIn=list.filter(e=>e.type==='income'&&e.status==='pending').reduce((s,e)=>s+e.amount,0),pendingOut=list.filter(e=>e.type==='expense'&&e.status==='pending').reduce((s,e)=>s+e.amount,0);$('reportSummary').innerHTML=[['Receitas recebidas',t.income,'positive'],['Despesas pagas',t.expense,'negative'],['Saldo registrado',t.profit,t.profit>=0?'positive':'negative'],['A receber',pendingIn,''],['A pagar',pendingOut,'']].map(x=>`<div class="card metric"><div class="label">${x[0].toUpperCase()}</div><div class="value ${x[2]}">${money(x[1])}</div></div>`).join('');let by={};list.filter(e=>e.type==='expense'&&e.status==='paid').forEach(e=>by[e.category]=(by[e.category]||0)+e.amount);$('reportCategories').innerHTML=Object.entries(by).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="item"><strong>${esc(c)}</strong><span class="amount">${money(n)}</span></div>`).join('')||'<div class="empty">Sem despesas pagas neste mês.</div>'}
+function settle(id){let e=entries.find(x=>x.id===id);if(e){e.status='paid';save();render()}}
+function removeEntry(id){if(confirm('Deseja excluir este lançamento?')){entries=entries.filter(x=>x.id!==id);save();render()}}
+window.settle=settle;window.removeEntry=removeEntry;
+$('entryForm').addEventListener('submit',ev=>{ev.preventDefault();let amount=Number($('amount').value);if(!Number.isFinite(amount)||amount<=0){alert('Informe um valor maior que zero.');return}entries.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),type:$('type').value,description:$('description').value.trim(),amount,date:$('date').value,category:$('category').value,payment:$('payment').value,status:$('status').value,vehicle:$('vehicle').value});save();$('description').value='';$('amount').value='';$('date').value=today();$('status').value='paid';$('range').value='month';showPage('dashboard');render()});
+function showPage(p){document.querySelectorAll('[id^="page-"]').forEach(el=>el.classList.toggle('hidden',el.id!=='page-'+p));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.page===p));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+$('range').addEventListener('change',render);$('reportMonth').addEventListener('change',renderReport);
+function csvDownload(name,rows){let csv=rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');let blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();URL.revokeObjectURL(a.href)}
+function exportList(list,name){csvDownload(name,[['Data','Tipo','Descrição','Categoria','Valor','Situação','Frequência','Veículo'],...list.map(e=>[e.date,e.type==='income'?'Receita':'Despesa',e.description,e.category,e.amount,e.status==='paid'?'Liquidado':'Pendente',e.payment,e.vehicle||''])])}
+$('exportBtn').addEventListener('click',()=>exportList(entries,'meu-corre-financeiro.csv'));
+$('reportExport').addEventListener('click',()=>exportList(entries.filter(e=>e.date.slice(0,7)===$('reportMonth').value),'relatorio-meu-corre.csv'));
+$('backupBtn').addEventListener('click',()=>{let blob=new Blob([JSON.stringify({app:'Meu Corre Financeiro',version:1,entries},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='backup-meu-corre-financeiro.json';a.click();URL.revokeObjectURL(a.href)});
+$('restoreBtn').addEventListener('click',()=>$('restoreFile').click());
+$('restoreFile').addEventListener('change',async ev=>{let f=ev.target.files[0];if(!f)return;try{let data=JSON.parse(await f.text());if(!Array.isArray(data.entries))throw new Error();if(confirm('Restaurar este backup? Os registros atuais serão substituídos.')){entries=data.entries;save();render();alert('Backup restaurado.')}}catch(e){alert('Não foi possível ler esse backup.')}ev.target.value=''});
+render();
+</script>
+</body></html>
